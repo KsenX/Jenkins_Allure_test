@@ -25,7 +25,7 @@ public class Mesto1Test {
                 .header("Content-type", "application/json") // Передаём Content-type в заголовке для указания типа файла
                 .auth().oauth2(bearerToken) // Передаём токен для аутентификации
                 .body("{\"name\":\"Москва\",\"link\":\"https://code.s3.yandex.net/qa-automation-engineer/java/files/paid-track/sprint1/photoSelenium.jpg\"}") // Формируем тело запроса
-                .post("/api/cards") // Делаем POST-запрос
+                .post("/api/card") // Делаем POST-запрос //тут ОШИБКА : card вместо cards
                 .then().statusCode(201); // Проверяем код ответа
     }
 
